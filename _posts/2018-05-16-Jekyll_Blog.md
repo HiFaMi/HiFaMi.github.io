@@ -119,4 +119,6 @@ bundle update
 bundle exec jekyll serve
 ```
 
-실행 후 <http://127.0.0.1:4000>로 접속하면  생성된 사이트를 볼 수 있다.
+실행 후 <http://127.0.0.1:4000>로 접속하면 아래와 같이 생성된 사이트를 볼 수 있다.
+
+<img src="{{ site.url }}/assets/images/blog_test.png" alt="블로그 테스트">
