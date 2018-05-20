@@ -1,5 +1,5 @@
 ---
-title: Python
+title: Python 숫자
 description: <center>python 숫자</center><br><center>-이 글은 fastcampus에서의 수강 후 쓴 글 입니다.-<center>
 categories:
  - python
@@ -102,7 +102,7 @@ Out[41]: 1000
   In [46]: c%8
   Out[46]: 4
   ```
-  
+
 5.부동소수점수형 변수를 정수형으로 형변환 해본다.
 ```python
 In [47]: int(3.7)

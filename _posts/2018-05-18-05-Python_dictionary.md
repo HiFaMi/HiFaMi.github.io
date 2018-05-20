@@ -1,5 +1,5 @@
 ---
-title: Python
+title: Python 딕셔너리
 description: <center>python 딕셔너리</center><br><center>-이 글은 fastcampus에서의 수강 후 쓴 글 입니다.-<center>
 categories:
  - python
