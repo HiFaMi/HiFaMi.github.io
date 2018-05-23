@@ -671,19 +671,19 @@ test_list
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 ```python
-start = 1
-a=0
-for i in range(len(test_list)):
-    mini = test_list[i]
-    for j in range(start,len(test_list)):
-        if mini>test_list[j]:
-            mini = test_list[j]
-    a=test_list[i]
-    test_list[i] = mini
-    for x in range(start,len(test_list)):
-        if mini == test_list[x]:
-            test_list[x]= a
-    start+=1
+def selection_sort2(x):
+    start =1
 
-print(test_list)
+    for i in range(len(x)):
+        min = x[i]
+        index = i
+        for j in range(start, len(x)):
+            if min>x[j]:
+                min = x[j]
+                index = j
+
+        x[i],x[index] = x[index],x[i]
+        print(x)
+        start+=1
+    return x
 ```
