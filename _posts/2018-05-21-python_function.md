@@ -588,3 +588,27 @@ print(f)
 
 [2, 4, 6, 8, 10, .... ,32, 40, 48, 56, 64, 72, 9, 18, 27, 36, 45, 54, 63, 72, 81]
 ```
+
+## 알고리즘
+* 순차검색(Sequential Search)
+  * 문자열과 키 문자 1개를 받는 함수 구현
+  * while문을 이용, 문자열에서 키 문자가 존재하는 index위치를 검사 후 해당 index를 리턴
+  * 찾지 못했을 경우 -1을 리턴
+
+```python
+def sequrntial_search(string,key):
+  index = 0
+  while True:
+      if key in string:
+          return string.index(key)
+          break
+      else:
+          return -1
+          break
+
+sequrntial_search('hello','o')
+4
+
+sequrntial_search('hello','i')
+-1
+```
