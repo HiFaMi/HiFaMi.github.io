@@ -560,15 +560,23 @@ cal(5)
 cal(5,2)
 10
 ```
+```python
+def square_or_multi_default_parameter(x,y=None):
+    if y:
+        return x*y
+    return x**2
+```
+```python
+def square_or_multi_default_parameter(x,y=None):
+    return x*y if y else x**2
+```        
 4.두 개의 숫자를 인자로 받아 합과 차를 튜플을 이용해 동시에 반환하는 함수를 정의하고 사용해본다.
 ```python
 def sum_and_subtraction(*args):
-    print(args[0]+args[1])
-    print(args[0]-args[1])
+    return((args[0]+args[1]),(args[0]-args[1]))
 
 sum_and_subtraction(10,4)
-14
-6
+(14, 6)
 ```    
 5.위치인자 묶음을 매개변수로 가지며, 위치인자가 몇 개 전달되었는지를 print하고 개수를 리턴해주는 함수를 정의하고 사용해본다.
 ```python
@@ -612,7 +620,29 @@ sequrntial_search('hello','o')
 sequrntial_search('hello','i')
 -1
 ```
+```python
+def sequrntial_search(string,key):
+    string_index = 0
+    while string_index<len(string):
+        if string[string_index] == key:
 
+            return string_index
+
+        else:
+            string_index+=1
+
+    return -1
+```
+```python
+def sequrntial_search3(string, key):
+    string_index = 0
+    for i in string:
+        if i == key:
+            return string_index
+        else:
+            string_index+=1
+    return -1
+```                
 * 선택정렬(Selection sort)
   * [9, 1, 6, 8, 4, 3, 2, 0, 5, 7] 를 정렬한다.
   * 정렬과정
@@ -639,4 +669,21 @@ selection_sort(test_list)
 
 test_list
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+```python
+start = 1
+a=0
+for i in range(len(test_list)):
+    mini = test_list[i]
+    for j in range(start,len(test_list)):
+        if mini>test_list[j]:
+            mini = test_list[j]
+    a=test_list[i]
+    test_list[i] = mini
+    for x in range(start,len(test_list)):
+        if mini == test_list[x]:
+            test_list[x]= a
+    start+=1
+
+print(test_list)
 ```
