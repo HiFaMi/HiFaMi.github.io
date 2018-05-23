@@ -612,3 +612,31 @@ sequrntial_search('hello','o')
 sequrntial_search('hello','i')
 -1
 ```
+
+* 선택정렬(Selection sort)
+  * [9, 1, 6, 8, 4, 3, 2, 0, 5, 7] 를 정렬한다.
+  * 정렬과정
+    1. 리스트 중 최소값을 검색
+    2. 그 값을 맨 앞의 값과 교체
+    3. 나머지 리스트에서 위의 과정을 반복
+
+```python
+def selection_sort(x):
+    a=0
+    index = 0
+    for i in range(len(x)):
+        if x.index(min(x[i:])) == x.index(x[i]):
+            x[i] = min(x[i:])
+        else:
+            a=x[i]
+            index = x.index(min(x[i:]))
+            x[i]=min(x[i:])
+            x[index]=a
+
+test_list = [9, 1, 6, 8, 4, 3, 2, 0, 5, 7]
+
+selection_sort(test_list)
+
+test_list
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
