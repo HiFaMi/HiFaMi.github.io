@@ -1,6 +1,6 @@
 ---
 title: Python 클래스
-description: <center>python function</center>  <center>-이 글은 fastcampus에서의 수강 후 쓴 글 입니다.-<center>
+description: <center>python class</center>  <center>-이 글은 fastcampus에서의 수강 후 쓴 글 입니다.-<center>
 categories:
  - python
 tags:
