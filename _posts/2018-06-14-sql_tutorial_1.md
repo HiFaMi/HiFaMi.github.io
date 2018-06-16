@@ -1,12 +1,12 @@
 ---
-title: SQL tutorial
+title: SQL tutorial - 1
 description: <center>SQL tutorial</center>  <center>-개인으로 공부하는거라 사실과 다를 수 있음.-<center>
 categories:
  - SQL
 tags:
 ---
 
-# SQL tutorial
+# SQL tutorial - 1
 ---
 **SQL 이란?**
 
@@ -283,83 +283,3 @@ WHERE condition;
 | WHERE CustomerName LIKE '_r%' |	문자하나 뒤에 r로 시작하는 모든 값 |
 | WHERE CustomerName LIKE 'a_%_%' |	'a'로 시작하고 길이가 3자 이상인 모든 값 |
 | WHERE ContactName LIKE 'a%o' |	'a'로 시작하고 'o'로 끝나는 모든 값 |
-
-## IN
----
-
-`IN` 연산자를 사용하여 `WHERE`절에 여러값을 지정할 수 있다.
-`IN` 연산자는 여러 `OR`의 줄임말이다.
-
-```python
-SELECT column_name(s)
-FROM table_name
-WHERE column_name IN (value1, value2, ...);
-```
-
-또는
-
-```python
-SELECT column_name(s)
-FROM table_name
-WHERE column_name IN (SELECT STATEMENT);
-```
-
-`IN`값에서 벗어난 값을 얻기 위해서는 아래와 같이 입력한다.
-
-```python
-SELECT column_name(s)
-FROM table_name
-WHERE column_name NOT IN (value1, value2, ...);
-```
-
-## BETWEEN
----
-`BETWEEN`은 주어진 범위의 값을 가져온다. 그 값이 텍스트, 숫자, 날짜일 수 있다.  
-`BETWEEN`은 시작 값과 끝 값이 존재한다.
-
-```python
-SELECT column_name(s)
-FROM table_name
-WHERE column_name BETWEEN value1 AND value2;
-```
-범위에 벗어난 값을 사용하기 위해서는 아래와 같은 값을 입력한다.
-
-```python
-SELECT column_name(s)
-FROM table_name
-WHERE column_name NOT BETWEEN value1 AND value2;
-```
-
-## Alias
-
-테이블 또는 `column`에 임시로 이름을 지정하는데 사용한다.(python의 as와 비슷함)
-
-열의 경우
-
-```python
-SELECT column_name AS alias_name
-FROM table_name;
-```
-
-테이블의 경우
-```python
-SELECT column_name(s)
-FROM table_name AS alias_name;
-```
-
-## JOIN
----
-
-두 개 이상의 테이블에 있는 행을 결합하는데 사용한다.  
-EX)
-```python
-SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-FROM Orders
-INNER JOIN Customers
-ON Orders.CustomerID=Customers.CustomerID;
-```
-
-* (INNER) JOIN : 두 테이블에서 값이 일치하는 레코드를 반환합니다.
-* LEFT (OUTER) JOIN : 왼쪽 테이블에서 모든 레코드를 반환하고 오른쪽 테이블에서 일치하는 레코드를 반환합니다.
-* RIGHT (OUTER) JOIN : 오른쪽 테이블에서 모든 레코드를 반환하고 왼쪽 테이블에서 일치하는 레코드를 반환합니다.
-* FULL (OUTER) JOIN : 왼쪽 또는 오른쪽 테이블에 일치하는 항목이 있으면 모든 레코드를 반환합니다.
