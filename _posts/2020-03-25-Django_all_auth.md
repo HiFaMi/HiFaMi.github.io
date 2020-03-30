@@ -38,16 +38,15 @@ python manage.py migrate
 (`kakao`의 경우 `Secret key`없이 `Client key`만 입력하여주면 된다.)
 
 그 다음 `templates`에 `login`에 대한 `html`파일을 만든 후
+처음에 `{% load socialaccount %}`를 입력하여야 한다.
 
 ```python
-{% load socialaccount %}
 <a href="{% provider_login_url '<social>' method='oauth2' %}"></a>
 ```
-위의 코드와 같이 입력하면 된다. 꼭 `{% load socialaccount %}`를 처음줄에 입력하여야한다.
+위의 코드와 같이 입력하면 된다.
 
 ex)
 ```python
-{% load socialaccount %}
 
 <a href="{% provider_login_url 'kakao' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'github' method='oauth2' %}"></a>
