@@ -48,14 +48,12 @@ python manage.py migrate
 그 다음 `templates`에 `login`에 대한 `html`파일을 만든 후
 
 ```python
-{% load socialaccount %}
 <a href="{% provider_login_url '<social>' method='oauth2' %}"></a>
 ```
 위의 코드와 같이 입력하면 된다.
 
 ex)
 ```python
-{% load socialaccount %}
 <a href="{% provider_login_url 'kakao' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'github' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'google' method='oauth2' %}"></a>
