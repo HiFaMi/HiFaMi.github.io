@@ -27,11 +27,19 @@ poetry add django-allauth
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.discord',
 ```
-그 다음에
+그 다음에 `urls.py`에 아래와 같이 입력한다.
+
+```python
+urlpatterns = [
+    path('accounts/', include('allauth.urls)),
+]
+```
+
+
 ```python
 python manage.py migrate
 ```
-를 입력하면 `django admin` 페이지에 소셜에 관련된 것이 추가되어 있는것을 볼 수 있다.
+마지막으로 `migrate` 하면 `django admin` 페이지에 소셜에 관련된 것이 추가되어 있는것을 볼 수 있다.
 
 이제 `guthub`, `kakao`등과 같은 사이트에 접속하여 `Client key`, `Secret key`를
 발급 받아 `django admin`페이지의 `SocialApplication` 항목에 추가시켜주면 된다.
@@ -53,4 +61,6 @@ ex)
 <a href="{% provider_login_url 'google' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'discord' method='oauth2' %}"></a>
 ```
+
+
 
