@@ -49,6 +49,7 @@ python manage.py migrate
 
 {% raw %}
 ```python
+{% load socialaccount %}
 <a href="{% provider_login_url '<social>' method='oauth2' %}"></a>
 ```
 {% endraw %}
@@ -58,6 +59,8 @@ python manage.py migrate
 ex)
 {% raw %}
 ```python
+{% load socialaccount %}
+
 <a href="{% provider_login_url 'kakao' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'github' method='oauth2' %}"></a>
 <a href="{% provider_login_url 'google' method='oauth2' %}"></a>
