@@ -2,7 +2,7 @@
 title: Programmers coding test stack/queue 1
 description: <center> Programmers coding test stack/queue 1 </center>
 categories:
- - Project
+ - Algorithm
 tags:
  - Programmers
  - algorithm

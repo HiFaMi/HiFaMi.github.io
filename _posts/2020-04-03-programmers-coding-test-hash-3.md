@@ -2,7 +2,7 @@
 title: Programmers coding test hash 3
 description: <center> Programmers coding test hash 3 </center>
 categories:
- - Project
+ - Algorithm
 tags:
  - Programmers
  - algorithm
